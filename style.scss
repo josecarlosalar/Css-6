@@ -1,0 +1,164 @@
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&display=swap');
+    body {
+        margin: 0px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+        background-color: #141414;
+        font-family: 'Hind Vadodara', sans-serif;
+        gap: 5px;
+    }
+    
+    header {
+        grid-column: 1/-1;
+        color: white;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .header-logo {
+            display: inline-flex;
+            img {
+                width: 6.2rem;
+            }
+        }
+        .header-buttons {
+            padding-right: 10px;
+            display: inline-flex;
+            font-size: 1.1rem;
+            div {
+                margin-left: 20px;
+                padding: 20px;
+            }
+        }
+    }
+    
+    main {
+        grid-column: 1/-1;
+        padding: 0px;
+        margin: 0px;
+        .section-title {
+            font-size: 1.6rem;
+            color: white;
+            #top-text::after {
+                font-weight: bold;
+                font-size: 2.3rem;
+            }
+        }
+        .top {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            .top-item {
+                flex-grow: 1;
+            }
+            img {
+                width: 100%;
+                ;
+            }
+        }
+    }
+    
+    @media screen and (min-width:1280px) {
+        header {
+            .platform-title {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                font-size: 1.2rem;
+            }
+            .header-buttons {
+                div:hover {
+                    background-color: white;
+                    color: black;
+                    border-radius: 10px;
+                }
+            }
+        }
+        main {
+            .section-title {
+                #top-text::after {
+                    content: "\00a0 5 \00a0";
+                }
+            }
+            .first {
+                display: flex;
+                justify-content: space-around;
+                .item {
+                    transition: transform .2s;
+                }
+                .item:hover {
+                    transform: scale(1.1);
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+            .second {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-around;
+                img {
+                    max-width: 100%;
+                }
+                .item {
+                    transition: transform .2s;
+                }
+                .item:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:1279px) {
+        header {
+            .platform-title {
+                display: none;
+            }
+        }
+        main {
+            .section-title {
+                #top-text::after {
+                    content: "\00a0 3 \00a0";
+                }
+            }
+            .top {
+                div:nth-child(1) {
+                    display: none;
+                }
+                div:nth-child(2) {
+                    display: none;
+                }
+            }
+            .first {
+                display: flex;
+                flex-wrap: wrap;
+                .item {
+                    flex-grow: 1;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .second {
+                display: flex;
+                flex-wrap: wrap;
+                .item {
+                    flex-grow: 1;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:600px) {
+        .top {
+            flex-direction: column-reverse !important;
+        }
+    }

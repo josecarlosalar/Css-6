@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300&display=swap");
+body {
+  margin: 0px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  background-color: #141414;
+  font-family: "Hind Vadodara", sans-serif;
+  gap: 5px;
+}
+
+header {
+  grid-column: 1/-1;
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-logo {
+  display: inline-flex;
+}
+header .header-logo img {
+  width: 6.2rem;
+}
+header .header-buttons {
+  padding-right: 10px;
+  display: inline-flex;
+  font-size: 1.1rem;
+}
+header .header-buttons div {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+main {
+  grid-column: 1/-1;
+  padding: 0px;
+  margin: 0px;
+}
+main .section-title {
+  font-size: 1.6rem;
+  color: white;
+}
+main .section-title #top-text::after {
+  font-weight: bold;
+  font-size: 2.3rem;
+}
+main .top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+main .top .top-item {
+  flex-grow: 1;
+}
+main .top img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  header .platform-title {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  header .header-buttons div:hover {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+  }
+  main .section-title #top-text::after {
+    content: " 5  ";
+  }
+  main .first {
+    display: flex;
+    justify-content: space-around;
+  }
+  main .first .item {
+    transition: transform 0.2s;
+  }
+  main .first .item:hover {
+    transform: scale(1.1);
+  }
+  main .first img {
+    max-width: 100%;
+  }
+  main .second {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  main .second img {
+    max-width: 100%;
+  }
+  main .second .item {
+    transition: transform 0.2s;
+  }
+  main .second .item:hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 1279px) {
+  header .platform-title {
+    display: none;
+  }
+  main .section-title #top-text::after {
+    content: " 3  ";
+  }
+  main .top div:nth-child(1) {
+    display: none;
+  }
+  main .top div:nth-child(2) {
+    display: none;
+  }
+  main .first {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .first .item {
+    flex-grow: 1;
+  }
+  main .first img {
+    width: 100%;
+  }
+  main .second {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .second .item {
+    flex-grow: 1;
+  }
+  main .second img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top {
+    flex-direction: column-reverse !important;
+  }
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

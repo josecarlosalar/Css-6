@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/josecarlosalar/Lemoncode-Css-Reto/issues"
   },
-  "homepage": "https://github.com/josecarlosalar/Lemoncode-Css-Reto#readme"
+  "homepage": "https://github.com/josecarlosalar/Lemoncode-Css-Reto#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
 }
