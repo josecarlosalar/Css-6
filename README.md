@@ -1,4 +1,4 @@
-# Lemoncode-Css-Reto
+# Css-6
 Diseño de pantalla de gestión de contenido audio visual responsive con Sass.
 
 ## Desktop:
